@@ -210,6 +210,8 @@ If something goes wrong:
 
 ### Build ports
 Then execute ```./build.sh --update-pkg-repo``` to compile the ~500 FreeBSD ports of pfSense.
+Go to /usr/local/www/nginx and delete poudriere symbolic link and create it again with 'ln -s /usr/local/poudriere/data/logs/bulk/Arknet_v2_7_0_amd64-Arknet_devel/latest poudriere'.
+For some reason the old symlink point to Arknet_v2_7_0_amd64-Arknet_ only instead of Arknet_v2_7_0_amd64-Arknet_devel. Need to update the script in Setup jails section.
 You may want to monitor the build environment on your server using HTTP ( http://ipOfYourServer/poudriere ). Expect between 4 to 6 hours to run.
 
 ![Disk partition](
